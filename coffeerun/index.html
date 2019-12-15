@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CoffeeRun</title>
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css>
+</head>
+<body class="container">
+    <header>
+        <h1>CoffeeRun</h1>
+    </header>
+    <section>
+        <div class = "panel panel-default">
+            <div class="panel-body" >
+                <form data-coffee-order= "form" action="">
+                   <div class="form-group">
+                       <label for="coffeeOrder">Orden</label>
+                       <input class="form-control" type="text" name="coffee" 
+                       id= "coffeeOrder" autofocus>
+                   </div>
+                   <div class="form-group">
+                       <label for="emailAdress">Email</label>
+                       <input class="form-control" type="email" 
+                       name="emailAdress" id="emailAdress" 
+                       placeholder="usuario@mail.com">
+                   </div>
+                   <div class="radio">
+                       <label>
+                           <input type="radio" name = "size" value="short">
+                           Pequeño
+                       </label>
+                   </div>
+                   <div class="radio">
+                        <label>
+                            <input type="radio" name = "size" value="tall" checked>
+                            Mediano
+                        </label>
+                        <div class="radio">
+                                <label>
+                                    <input type="radio" name = "size" value="grande">
+                                    Grande
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="flavorShot">Sabor</label>
+                                <select class="form-control" id="flavor" id="flavorShot">
+                                    <option value="">Ninguno</option>
+                                    <option value="caramel">Caramelo</option>
+                                    <option value="almond">Almendra</option>
+                                    <option value="mocha">Moca</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="strengthLevel">Nivel de cafeina</label>
+                                <input type="range" name="strength" id="strengthLevel"
+                                value="30">
+                            </div>
+                            <button class="btn btn-default" type="submit">Enviar</button>
+                            <button class="btn btn-default" type="reset">Limpiar</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4>Órdenes pendientes:</h4>
+                        <div data-coffee-order="checklist">
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+            <script src="scripts/checklist.js"></script>
+            <script src = "scripts/FormHandler.js"></script>
+            <script src="scripts/RemoteDataStore.js"></script>
+            <script src = "scripts/DataStore.js"></script>
+            <script src = "scripts/Truck.js"></script> 
+            <script src="scripts/Main.js"></script>
+        </body>
+    </html>
